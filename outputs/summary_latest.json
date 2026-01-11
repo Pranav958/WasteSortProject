@@ -1,0 +1,16 @@
+[
+    {
+        "object": 1,
+        "yolo_label": "METAL",
+        "source": "waste_yolo",
+        "classifier_result": "non biodegradable",
+        "confidence": 99.13
+    },
+    {
+        "object": 2,
+        "yolo_label": "METAL",
+        "source": "waste_yolo",
+        "classifier_result": "non biodegradable",
+        "confidence": 100.0
+    }
+]

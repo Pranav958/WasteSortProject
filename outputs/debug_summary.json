@@ -1,0 +1,67 @@
+[
+  {
+    "bbox": [
+      13,
+      179,
+      82,
+      244
+    ],
+    "yolo_label": "cardboard",
+    "source": "waste",
+    "classifier_result": "non biodegradable",
+    "classifier_conf": 96.86991882324219,
+    "crop": "outputs/crops_debug\\crop_1_cardboard.jpg"
+  },
+  {
+    "bbox": [
+      8,
+      114,
+      86,
+      180
+    ],
+    "yolo_label": "cardboard",
+    "source": "waste",
+    "classifier_result": "non biodegradable",
+    "classifier_conf": 92.67332458496094,
+    "crop": "outputs/crops_debug\\crop_2_cardboard.jpg"
+  },
+  {
+    "bbox": [
+      0,
+      0,
+      205,
+      207
+    ],
+    "yolo_label": "paper",
+    "source": "waste",
+    "classifier_result": "non biodegradable",
+    "classifier_conf": 99.81148529052734,
+    "crop": "outputs/crops_debug\\crop_3_paper.jpg"
+  },
+  {
+    "bbox": [
+      147,
+      112,
+      184,
+      181
+    ],
+    "yolo_label": "bottle",
+    "source": "general_relevant",
+    "classifier_result": "non biodegradable",
+    "classifier_conf": 99.26721954345703,
+    "crop": "outputs/crops_debug\\crop_4_bottle.jpg"
+  },
+  {
+    "bbox": [
+      115,
+      113,
+      152,
+      181
+    ],
+    "yolo_label": "bottle",
+    "source": "general_relevant",
+    "classifier_result": "non biodegradable",
+    "classifier_conf": 99.27857971191406,
+    "crop": "outputs/crops_debug\\crop_5_bottle.jpg"
+  }
+]
