@@ -1,85 +1,106 @@
-# ♻️ Waste Detection and Classification System
+# ♻️ WasteSort: Hybrid Waste Detection & Classification System
 
-A computer vision–based system that detects objects in images and classifies waste into **biodegradable**, **non-biodegradable**, or **not waste** using a hybrid deep learning pipeline.
+## 📌 Overview
+WasteSort is an end-to-end computer vision system that detects and classifies waste items from images.  
+The project is designed to support automated waste segregation and recycling workflows by combining object detection and image classification models.
+
+This system follows a **hybrid pipeline**:
+- Object Detection to localize waste items
+- Image Classification to identify the waste category
 
 ---
 
-## 📌 Project Description
+## 🚀 Features
+- Detects waste objects in images using **YOLOv8**
+- Classifies detected waste using a **MobileNetV2 CNN**
+- End-to-end Python-based inference pipeline
+- Modular design (detection + classification stages)
+- Applicable to real-world waste management scenarios
 
-This project implements an intelligent waste detection system by combining "object detection" and "image classification" models. The system first detects objects using YOLOv8 and then classifies each detected object using a CNN-based classifier trained with transfer learning.
+---
 
+## 🧠 Technical Approach
 
+### 1. Object Detection
+- Model: YOLOv8  
+- Purpose: Detect waste objects and generate bounding boxes  
 
-System Architecture:
+### 2. Waste Classification
+- Model: MobileNetV2 (CNN)  
+- Framework: TensorFlow / Keras  
+- Purpose: Classify detected waste into predefined categories  
 
-1. YOLOv8 (General Object Detector)  
-2. YOLOv8 (Waste-Specific Detector)  
-3. CNN Classifier (MobileNetV2 – Transfer Learning)  
-4. Post-processing (IOU filtering, duplicate removal)
+### 3. Pipeline Flow
+1. Input image is provided to the system  
+2. YOLOv8 detects waste regions  
+3. Detected regions are cropped  
+4. Cropped images are passed to the classifier  
+5. Final labeled output is generated  
 
+---
 
+## 🛠️ Tech Stack
+- Programming Language: Python  
+- Deep Learning: TensorFlow, Keras  
+- Computer Vision: OpenCV  
+- Object Detection: YOLOv8  
+- Data Processing: NumPy, Pillow  
 
-Project Structure:
+---
 
-waste-detection-system/
+## 📊 Results
+- Achieved approximately **97% classification accuracy** on validation/testing data  
+- Successfully detects and classifies waste across multiple sample images  
+- Demonstrates robustness across varied lighting conditions and backgrounds  
+
+*Performance may vary depending on dataset quality and image conditions.*
+
+---
+
+## 📂 Project Structure
+```
+WasteSortProject/
 │
-├── integrated_pipeline.py
-├── model1_detection.py
-├── train_classifier.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-│
-├── models/
-├── datasets/
-├── outputs/
+├── yolo_detect.py          # YOLOv8-based waste detection
+├── classifier.py           # CNN-based waste classification
+├── train_classifier.py     # Training script for MobileNetV2
+├── requirements.txt        # Project dependencies
+├── README.md               # Documentation
+└── sample_images/          # Example input images
+```
 
+---
 
-Installation:
+## ▶️ How to Run
 
+### 1. Clone the Repository
+```
+git clone https://github.com/Pranav958/WasteSortProject.git
+cd WasteSortProject
+```
 
+### 2. Install Dependencies
+```
 pip install -r requirements.txt
+```
 
-How to Run:
+### 3. Run the Detection & Classification Pipeline
+```
+python yolo_detect.py
+```
 
-python integrated_pipeline.py path/to/image.jpg
+---
 
+## 💡 Applications
+- Automated waste segregation systems  
+- Smart recycling solutions  
+- Environmental monitoring tools  
+- Computer vision pipelines for object classification  
 
-Model Details:
+---
 
-Detection: YOLOv8 (Ultralytics)
-
-Classification: MobileNetV2 (Transfer Learning)
-
-Classifier Accuracy: ~97%
-
-
-Limitations:
-
-Overall performance depends on object detection quality
-
-Accuracy varies on complex or cluttered images
-
-
-Future Improvements:
-
-Real-time video support
-
-Larger and more diverse dataset
-
-Web or mobile deployment
-
-
-Technologies Used:
-
-Python
-
-TensorFlow / Keras
-
-YOLOv8
-
-OpenCV
-
-NumPy
-
-Pillow(Python Imaging Library fork)
+## 🔮 Future Improvements
+- Extend support to real-time video streams  
+- Increase number of waste categories  
+- Deploy as a web or mobile application  
+- Improve dataset diversity and scale  
